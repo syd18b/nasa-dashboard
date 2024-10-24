@@ -1,24 +1,32 @@
 import { LitElement, html, css } from "lit";
+import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
-export class NasaImage extends LitElement {
+export class nasaImage extends DDDSuper(LitElement) {
   constructor() {
     super();
-    this.title = "";
-    this.source = "";
+    this.title = "Moon";
+    this.owner = "your mom";
+    this.source =
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/1200px-FullMoon2010.jpg";
   }
 
   static get properties() {
     return {
       source: { type: String },
       title: { type: String },
+      owner: { type: String },
     };
   }
 
   static get styles() {
     return [
       css`
-        .image {
+        :host:hover {
+          background-color: red;
+        }
+        .image:hover {
           display: inline-block;
+          background-color: lightblue;
         }
 
         .image div {
@@ -38,14 +46,16 @@ export class NasaImage extends LitElement {
 
   render() {
     return html`
-      <div class="image">
-        <img src="${this.source}" />
+      <a class="image" href=${this.source}>
+        <img src="${this.source}" style="width: 240px" alt="${this.title}" />
+
         <div>${this.title}</div>
-      </div>
+        <div>${this.owner}</div>
+      </a>
     `;
   }
   static get tag() {
     return "nasa-image";
   }
 }
-customElements.define(NasaImage.tag, NasaImage);
+customElements.define(nasaImage.tag, nasaImage);
