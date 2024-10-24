@@ -37,8 +37,16 @@ export class nasaImage extends DDDSuper(LitElement) {
 
         .image img {
           display: block;
-          width: 200px;
-          height: 200px;
+          width: 240px;
+        }
+        a {
+          padding: 4px;
+          border: 2px solid pink;
+          display: inline-block;
+        }
+        a:hover {
+          max-width: 240px;
+          background-color: lightblue;
         }
       `,
     ];
@@ -46,8 +54,8 @@ export class nasaImage extends DDDSuper(LitElement) {
 
   render() {
     return html`
-      <a class="image" href=${this.source}>
-        <img src="${this.source}" style="width: 240px" alt="${this.title}" />
+      <a class="image" href=${this.source} target="_blank">
+        <img src="${this.source}" alt="${this.title}" />
 
         <div>${this.title}</div>
         <div>${this.owner}</div>
