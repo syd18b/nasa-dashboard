@@ -1,0 +1,213 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "nasa-dashboard.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "NasaSearch",
+          "members": [
+            {
+              "kind": "method",
+              "name": "inputChanged",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "updateResults",
+              "parameters": [
+                {
+                  "name": "value"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "null"
+              },
+              "default": "null",
+              "privacy": "public",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "privacy": "public",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "loading",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "privacy": "public",
+              "attribute": "loading",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "items",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]",
+              "privacy": "public",
+              "attribute": "items"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "title",
+              "fieldName": "title"
+            },
+            {
+              "name": "loading",
+              "fieldName": "loading"
+            },
+            {
+              "name": "items",
+              "fieldName": "items"
+            },
+            {
+              "name": "value",
+              "fieldName": "value"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "NasaSearch",
+          "declaration": {
+            "name": "NasaSearch",
+            "module": "nasa-dashboard.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "NasaSearch",
+            "module": "nasa-dashboard.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "nasa-image.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "nasaImage",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true
+            },
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"Moon\"",
+              "privacy": "public",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "owner",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"your mom\"",
+              "privacy": "public",
+              "attribute": "owner"
+            },
+            {
+              "kind": "field",
+              "name": "source",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/1200px-FullMoon2010.jpg\"",
+              "privacy": "public",
+              "attribute": "source"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "source",
+              "fieldName": "source"
+            },
+            {
+              "name": "title",
+              "fieldName": "title"
+            },
+            {
+              "name": "owner",
+              "fieldName": "owner"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "DDDSuper",
+              "package": "@haxtheweb/d-d-d/d-d-d.js"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "nasaImage",
+          "declaration": {
+            "name": "nasaImage",
+            "module": "nasa-image.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "nasaImage",
+            "module": "nasa-image.js"
+          }
+        }
+      ]
+    }
+  ]
+}
